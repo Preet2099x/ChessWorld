@@ -1,14 +1,13 @@
-import React from 'react';
 import './Chessboard.scss';
 
 const Chessboard = () => {
-  const board = [];
 
+  const board = [];
 
   for (let row = 8; row >= 1; row--) {
     for (let col of ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']) {
-      const squareId = col + row;  // 'a8', 'b8', etc.
- 
+      const squareId = col + row;  
+      
       const isDarkSquare = (row + col.charCodeAt(0)) % 2 === 0;
       
       board.push(
